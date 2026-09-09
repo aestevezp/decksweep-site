@@ -1,0 +1,4 @@
+:root{color-scheme:dark}body{margin:0;font-family:-apple-system,system-ui,sans-serif;background:#0b0b10;color:#eee}
+main{max-width:720px;margin:0 auto;padding:48px 24px;line-height:1.55}h1{font-size:2rem;margin:.2em 0}h2{margin-top:2em}
+a{color:#8fb3ff}.btn{display:inline-block;background:#3373ff;color:#fff;padding:12px 20px;border-radius:12px;text-decoration:none;font-weight:600}
+.muted{color:#9aa}img.hero{width:100%;border-radius:16px;margin:24px 0}footer{margin-top:64px;font-size:.9rem;color:#889}
