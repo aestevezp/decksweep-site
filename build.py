@@ -183,8 +183,10 @@ def landing(t, lang):
     steps = "".join(f'<div class="step"><div class="n">{i+1}</div><h3>{h}</h3><p>{b}</p></div>' for i,(h,b) in enumerate(s["steps"]))
     imgs = ["01-home","02-swipe","03-group","04-review"]
     feats = "".join(f'<div class="feature"><div class="shot"><div class="phone"><img src="{p}img/{imgs[i]}.png" alt=""></div></div><div><h3>{h}</h3><p>{b}</p></div></div>' for i,(h,b) in enumerate(s["feats"]))
-    cards = "".join(f'<div class="card"><h3>{h}</h3><p>{b.replace("href=\"privacy/\"", f"href=\"{href(lang,"privacy/")}\"")}</p></div>' for h,b in s["cards"])
-    mac = "".join(f"<li>{x.replace('href=\"../DeckSweep', f'href=\"{p}DeckSweep').replace('href=\"DeckSweep', f'href=\"{p}DeckSweep')}</li>" for x in s["mac_steps"])
+    priv = 'href="' + href(lang, "privacy/") + '"'
+    cards = "".join('<div class="card"><h3>%s</h3><p>%s</p></div>' % (h, b.replace('href="privacy/"', priv)) for h, b in s["cards"])
+    dmg = 'href="' + p + 'DeckSweep'
+    mac = "".join("<li>%s</li>" % x.replace('href="../DeckSweep', dmg).replace('href="DeckSweep', dmg) for x in s["mac_steps"])
     ios = "".join(f"<li>{x}</li>" for x in s["ios_steps"])
     faqs = "".join(f'<details><summary>{q}</summary><p>{a}</p></details>' for q,a in s["faqs"])
     faq_k = s["faq_k"].replace('href="support/"', f'href="{href(lang,"support/")}"')
