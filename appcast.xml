@@ -4,11 +4,11 @@
         <title>DeckSweepAgent</title>
         <item>
             <title>1.0</title>
-            <pubDate>Wed, 09 Sep 2026 10:22:54 +0200</pubDate>
+            <pubDate>Wed, 09 Sep 2026 19:06:13 +0200</pubDate>
             <sparkle:version>1</sparkle:version>
             <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://decksweep.securlabs.net/DeckSweep-1.0.dmg" length="2385930" type="application/octet-stream" sparkle:edSignature="4oLLDatzVV3MLvaf3yz5Xewf5Ojg98ah3eiKLUjelQKEsyNiNEbJwJPM03fEhhutVDKaH0ylbNNrVfb33g2CCQ=="/>
+            <enclosure url="https://decksweep.securlabs.net/DeckSweep-1.0.dmg" length="2414417" type="application/octet-stream" sparkle:edSignature="W/rcPm4m/iZx3RdO7FGCN52tovJN7aklgQ7GzePWoVjh4k/fkJQpxgUTlKwjIC5YMC5VcgQeDyyIPh3Z9FEKCw=="/>
         </item>
     </channel>
 </rss>
