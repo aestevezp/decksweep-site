@@ -2,3 +2,7 @@
 main{max-width:720px;margin:0 auto;padding:48px 24px;line-height:1.55}h1{font-size:2rem;margin:.2em 0}h2{margin-top:2em}
 a{color:#8fb3ff}.btn{display:inline-block;background:#3373ff;color:#fff;padding:12px 20px;border-radius:12px;text-decoration:none;font-weight:600}
 .muted{color:#9aa}img.hero{width:100%;border-radius:16px;margin:24px 0}footer{margin-top:64px;font-size:.9rem;color:#889}
+.lead{font-size:1.25rem;color:#cdd}header p.cta{margin:.4em 0}.store{color:#9aa;font-size:.95rem}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin:32px 0}
+.shots figure{margin:0}.shots img{width:100%;border-radius:14px;border:1px solid #222}.shots figcaption{font-size:.85rem;color:#9aa;margin-top:6px}
+.steps li{margin:.5em 0}section{margin-top:2.5em}h3{margin:1.2em 0 .4em}

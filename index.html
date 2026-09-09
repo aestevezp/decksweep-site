@@ -1,12 +1,62 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>DeckSweep — swipe your Mac clean from your iPhone</title><link rel="stylesheet" href="style.css"></head><body><main>
-<h1>DeckSweep</h1><p class="muted">Swipe your Mac clean from your iPhone.</p>
-<!-- hero.png from Marketing/art goes here once exported: <img class="hero" src="hero.png" alt=""> -->
-<p>A small helper on your Mac finds old screenshots, duplicate photos, forgotten downloads and used installers. The iPhone app turns them into a deck: swipe right to keep, left to trash. Nothing is deleted — files go to your Mac's Trash, and nothing ever leaves your Mac.</p>
-<p><a class="btn" href="DeckSweep-1.0.dmg">Download DeckSweep for Mac</a> <span class="muted">macOS 14 or later · notarized</span></p>
-<p>Then get the iPhone app from the App Store, open it on the same Wi‑Fi, and scan the QR code in the menu bar.</p>
-<h2>How it stays safe</h2><ul>
-<li>Only the folders you choose. Never system files, never other apps' data.</li>
-<li>Trash, never delete. Undo works even after committing.</li>
-<li>No account, no cloud, no analytics. The phone and the Mac talk directly, encrypted, on your own network.</li></ul>
+<title>DeckSweep — swipe your Mac clean from your iPhone</title>
+<meta name="description" content="A Mac helper finds old screenshots, duplicates and forgotten downloads; you swipe through them on your iPhone. Files go to the Trash, nothing leaves your Mac.">
+<link rel="stylesheet" href="style.css"></head><body><main>
+
+<header>
+<h1>DeckSweep</h1><p class="lead">Swipe your Mac clean from your iPhone.</p>
+<p>A small helper on your Mac finds the files you don't need any more — old screenshots, duplicate photos, near-identical bursts, forgotten downloads, installers you already ran — and turns them into a deck. On the iPhone: swipe right to keep, left to trash. Nothing is deleted; files go to your Mac's Trash and nothing ever leaves your Mac.</p>
+<p class="cta"><a class="btn" href="DeckSweep-1.0.dmg">Download for Mac</a> <span class="muted">macOS 14 or later · free · notarized by Apple</span></p>
+<p class="cta"><a class="store" id="appstore" href="#install">iPhone app: coming to the App Store</a></p>
+</header>
+
+<section class="shots" aria-label="Screenshots">
+<figure><img src="img/01-home.png" alt="Home: reclaimable space and the decks — screenshots, duplicates, similar photos, large downloads"><figcaption>See what's reclaimable, by deck.</figcaption></figure>
+<figure><img src="img/02-swipe.png" alt="A card with an old screenshot; swipe right to keep, left to trash"><figcaption>Swipe. Right keeps, left trashes.</figcaption></figure>
+<figure><img src="img/03-group.png" alt="A group card showing two near-identical photos with the keeper marked"><figcaption>Duplicates side by side — pick the one that stays.</figcaption></figure>
+<figure><img src="img/04-review.png" alt="Review sheet listing the files to trash with toggles, and a Commit button"><figcaption>Review, then commit. Nothing moves before that.</figcaption></figure>
+</section>
+
+<section id="how"><h2>How it works</h2>
+<ol class="steps">
+<li><b>On the Mac</b>, DeckSweep lives in the menu bar (✦). It scans Desktop, Downloads, Pictures, Documents and Movies — you choose the folders — and ranks what it finds by how much space it would give back and how sure it is.</li>
+<li><b>On the iPhone</b>, pair once by scanning the QR code in that menu (or typing the six digits). The phone and the Mac talk directly over your Wi‑Fi, encrypted. No account, no cloud.</li>
+<li><b>Swipe.</b> Right keeps, left trashes, down decides later. Tap a card for a full-size preview. Duplicate groups show every copy with the keeper marked; tap another copy to keep that one instead.</li>
+<li><b>Commit.</b> A review list shows exactly what will move, with a toggle to change your mind. Then the files go to the Trash on the Mac. Undo works even after committing.</li>
+</ol></section>
+
+<section id="install"><h2>Install</h2>
+<h3>Mac helper</h3>
+<ol>
+<li><a href="DeckSweep-1.0.dmg">Download DeckSweep-1.0.dmg</a> and open it.</li>
+<li>Drag <b>DeckSweepAgent</b> to <b>Applications</b>, then open it from there. It's notarized by Apple, so it opens without warnings.</li>
+<li>Look for ✦ at the top right of the screen. The first scan runs on its own; the menu shows a QR code and a six-digit code.</li>
+<li>Optional: turn on <i>Launch at login</i> in the menu, and grant <i>Full Disk Access</i> (System Settings → Privacy &amp; Security) if you want accurate "last opened" dates. Scanning works without it.</li>
+</ol>
+<h3>iPhone app</h3>
+<ol>
+<li>Install DeckSweep from the App Store (link here as soon as it's live).</li>
+<li>Open it on the same Wi‑Fi as the Mac. When iOS asks to <i>find and connect to devices on your local network</i>, allow it — that's how it finds the Mac.</li>
+<li>Tap your Mac in the list, then <b>Scan QR</b> and point the camera at the menu on the Mac. Done — it reconnects on its own next time.</li>
+<li>No Mac nearby? <b>Try without a Mac</b> runs the whole flow on sample data.</li>
+</ol></section>
+
+<section id="pricing"><h2>Price</h2>
+<p>The Mac helper is free. The iPhone app is free for your first <b>50 files</b>; <b>DeckSweep Unlimited</b> is a one-time purchase inside the app — no subscription, shared with your family.</p></section>
+
+<section id="safety"><h2>How it stays safe</h2><ul>
+<li><b>Only the folders you choose.</b> Never system files, never other apps' data, never anything you didn't point it at.</li>
+<li><b>Trash, never delete.</b> Emptying the Trash is a separate step you confirm, on the Mac, within minutes of a commit.</li>
+<li><b>Nothing leaves your Mac.</b> The phone receives small previews; the Mac receives verdicts. No account, no analytics, no third-party code in either app. <a href="privacy/">Privacy policy</a>.</li>
+<li><b>Changed files are left alone.</b> Anything modified since the scan is skipped and reported.</li>
+</ul></section>
+
+<section id="faq"><h2>FAQ</h2>
+<p><b>The phone can't find my Mac.</b> Same Wi‑Fi, ✦ in the Mac's menu bar, and <i>Local Network</i> allowed for DeckSweep in iOS Settings.</p>
+<p><b>Where did the files go?</b> The Trash on your Mac. Open Finder → Trash, or <i>Show Trash</i> in the menu.</p>
+<p><b>Can I undo?</b> Yes — shake the phone for the last swipe, or use the review list before committing. After committing, the Mac's menu can put files back as long as they're still in the Trash.</p>
+<p><b>Does it touch my Photos library?</b> No. Packages like Photos libraries and apps are never entered.</p>
+<p><b>Which Macs?</b> macOS 14 Sonoma or later, Apple silicon or Intel. iPhone: iOS 17 or later.</p>
+<p>More help: <a href="support/">support</a>.</p></section>
+
 <footer><a href="privacy/">Privacy</a> · <a href="support/">Support</a> · © 2026 Securlabs</footer></main></body></html>
