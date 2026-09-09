@@ -3,7 +3,7 @@
 import os, html
 ROOT = os.path.dirname(os.path.abspath(__file__))
 LANGS = ["en", "es", "ca"]
-CSS_VERSION = 7          # bump whenever style.css changes; every generated page picks it up
+CSS_VERSION = 8          # bump whenever style.css changes; every generated page picks it up
 S = {
 "en": dict(lang="en",
   swipe_h="Swipe, like a deck of cards", swipe_k="One card, one decision, one thumb. Tinder for the junk on your Mac — except nothing is ever lost.",
@@ -184,8 +184,12 @@ def nav(t, lang, page, doc=False):
     switch = "".join(f'<a class="{"on" if l == lang else ""}" href="{href(l, page)}" lang="{l}" hreflang="{l}" title="{NAMES[l]}" aria-label="{NAMES[l]}">{l.upper()}</a>' for l in LANGS)
     links = "" if doc else (f'<div class="links"><a href="#how">{t["nav_how"]}</a><a href="#features">{t["nav_feat"]}</a>'
                             f'<a href="#install">{t["nav_install"]}</a><a href="#price">{t["nav_price"]}</a><a href="#faq">{t["nav_faq"]}</a></div>')
-    dl = "" if doc else f'<a class="btn small" href="{p}DeckSweep-1.0.dmg">{t["nav_dl"]}</a>'
-    return f'<nav><div class="wrap"><a class="brand" href="{href(lang)}"><img src="{p}img/icon.png" alt="">DeckSweep</a>{links}<div class="langs">{switch}</div>{dl}</div></nav>'
+    dl = "" if doc else f'<a class="btn small dl" href="{p}DeckSweep-1.0.dmg" aria-label="{t["nav_dl"]}"><span class="full">{t["nav_dl"]}</span><span class="short">Mac ↓</span></a>'
+    # Phones: the section links live in a hamburger (a <details>, no JavaScript needed).
+    menu = "" if doc else (f'<details class="menu"><summary aria-label="Menu">☰</summary><div>'
+                           f'<a href="#how">{t["nav_how"]}</a><a href="#swipe">{t["swipe_h"]}</a><a href="#features">{t["nav_feat"]}</a>'
+                           f'<a href="#install">{t["nav_install"]}</a><a href="#price">{t["nav_price"]}</a><a href="#faq">{t["nav_faq"]}</a></div></details>')
+    return f'<nav><div class="wrap">{menu}<a class="brand" href="{href(lang)}"><img src="{p}img/icon.png" alt=""><span>DeckSweep</span></a>{links}<div class="langs">{switch}</div>{dl}</div></nav>'
 
 def footer(t, lang):
     return (f'<footer><div class="wrap"><span>© 2026 Securlabs</span><a href="{href(lang,"privacy/")}">{t["f_privacy"]}</a>'
