@@ -4,7 +4,11 @@ import os, html
 ROOT = os.path.dirname(os.path.abspath(__file__))
 LANGS = ["en", "es", "ca"]
 S = {
-"en": dict(lang="en", title="DeckSweep — swipe your Mac clean from your iPhone",
+"en": dict(lang="en",
+  swipe_h="Swipe, like a deck of cards", swipe_k="One card, one decision, one thumb. Tinder for the junk on your Mac — except nothing is ever lost.",
+  swipe_keep="Swipe right to keep", swipe_keep_p="The card turns green and stays where it is. Use it for anything you're not sure about — keeping is always free.",
+  swipe_trash="Swipe left to trash", swipe_trash_p="The card turns red and joins the review list. It moves to the Trash only when you tap Commit, and undo works even after that.",
+  swipe_more="Swipe down to decide later; it comes back at the end of the deck. Tap a card to see it full size. Shake to undo the last swipe.", title="DeckSweep — swipe your Mac clean from your iPhone",
   desc="A Mac helper finds old screenshots, duplicates and forgotten downloads; you swipe through them on your iPhone. Files go to the Trash, nothing leaves your Mac.",
   nav_how="How it works", nav_feat="Features", nav_install="Install", nav_price="Price", nav_faq="FAQ", nav_dl="Download for Mac",
   h1a="Swipe your Mac clean ", h1b="from your iPhone.",
@@ -53,7 +57,11 @@ S = {
                ("How do I unpair a phone?","Click the ✕ next to it in the Mac's menu."),
                ("How do I stop the Mac app?","Menu → Quit, and untick \"Launch at login\".")],
   home="Home"),
-"es": dict(lang="es", title="DeckSweep — limpia tu Mac deslizando desde el iPhone",
+"es": dict(lang="es",
+  swipe_h="Desliza, como una baraja", swipe_k="Una tarjeta, una decisión, un pulgar. Tinder para lo que sobra en tu Mac, salvo que aquí nunca se pierde nada.",
+  swipe_keep="Desliza a la derecha para conservar", swipe_keep_p="La tarjeta se pone verde y el archivo se queda donde está. Úsalo para todo lo que no tengas claro: conservar siempre es gratis.",
+  swipe_trash="Desliza a la izquierda para tirar", swipe_trash_p="La tarjeta se pone roja y entra en la lista de revisión. Solo va a la Papelera cuando pulsas Aplicar, y deshacer funciona incluso después.",
+  swipe_more="Desliza hacia abajo para decidirlo luego; vuelve al final de la baraja. Toca una tarjeta para verla a tamaño completo. Agita para deshacer el último deslizamiento.", title="DeckSweep — limpia tu Mac deslizando desde el iPhone",
   desc="Un ayudante en el Mac encuentra capturas antiguas, duplicados y descargas olvidadas; tú los repasas deslizando en el iPhone. Los archivos van a la Papelera; nada sale de tu Mac.",
   nav_how="Cómo funciona", nav_feat="Funciones", nav_install="Instalar", nav_price="Precio", nav_faq="Preguntas", nav_dl="Descargar para Mac",
   h1a="Limpia tu Mac ", h1b="desde tu iPhone.",
@@ -102,7 +110,11 @@ S = {
                ("¿Cómo desvinculo un teléfono?","Pulsa la ✕ junto a él en el menú del Mac."),
                ("¿Cómo detengo la app del Mac?","Menú → Salir, y desmarca «Abrir al iniciar sesión».")],
   home="Inicio"),
-"ca": dict(lang="ca", title="DeckSweep — neteja el teu Mac lliscant des de l'iPhone",
+"ca": dict(lang="ca",
+  swipe_h="Llisca, com una baralla de cartes", swipe_k="Una targeta, una decisió, un polze. Tinder per al que sobra al teu Mac, només que aquí mai no es perd res.",
+  swipe_keep="Llisca a la dreta per conservar", swipe_keep_p="La targeta es torna verda i el fitxer es queda on és. Fes-ho servir per a tot el que no tinguis clar: conservar sempre és gratis.",
+  swipe_trash="Llisca a l'esquerra per llençar", swipe_trash_p="La targeta es torna vermella i entra a la llista de revisió. Només va a la Paperera quan prems Aplica, i desfer funciona fins i tot després.",
+  swipe_more="Llisca cap avall per decidir-ho després; torna al final de la baralla. Toca una targeta per veure-la a mida completa. Sacseja per desfer l'últim lliscament.", title="DeckSweep — neteja el teu Mac lliscant des de l'iPhone",
   desc="Un ajudant al Mac troba captures antigues, duplicats i baixades oblidades; tu els repasses lliscant a l'iPhone. Els fitxers van a la Paperera; res no surt del teu Mac.",
   nav_how="Com funciona", nav_feat="Funcions", nav_install="Instal·lar", nav_price="Preu", nav_faq="Preguntes", nav_dl="Baixa per a Mac",
   h1a="Neteja el teu Mac ", h1b="des del teu iPhone.",
@@ -195,7 +207,11 @@ def landing(t, lang):
       f'<div class="cta"><a class="btn" href="{p}DeckSweep-1.0.dmg">{s["nav_dl"]}</a><a class="btn ghost" href="#install">{s["cta_ios"]}</a><span class="note">{s["note"]}</span></div></div>'
       f'<div class="phones"><div class="phone back"><img src="{p}img/01-home.png" alt=""></div><div class="phone front"><img src="{p}img/02-swipe.png" alt=""></div></div></div></header>'
       f'<section id="how"><div class="wrap"><h2>{s["how"]}</h2><p class="kicker">{s["how_k"]}</p><div class="steps">{steps}</div></div></section>'
-      f'<section id="features" class="alt"><div class="wrap">{feats}</div></section>'
+      f'<section id="swipe" class="alt"><div class="wrap"><h2>{s["swipe_h"]}</h2><p class="kicker">{s["swipe_k"]}</p>'
+      f'<div class="swipe"><figure><div class="phone"><img src="{p}img/swipe-keep.png" alt=""></div><h3 class="keep">{s["swipe_keep"]}</h3><p>{s["swipe_keep_p"]}</p></figure>'
+      f'<figure><div class="phone"><img src="{p}img/swipe-trash.png" alt=""></div><h3 class="trash">{s["swipe_trash"]}</h3><p>{s["swipe_trash_p"]}</p></figure></div>'
+      f'<p class="more">{s["swipe_more"]}</p></div></section>'
+      f'<section id="features"><div class="wrap">{feats}</div></section>'
       f'<section><div class="wrap"><h2>{s["safe"]}</h2><p class="kicker">{s["safe_k"]}</p><div class="cards">{cards}</div></div></section>'
       f'<section id="install" class="alt"><div class="wrap"><h2>{s["install"]}</h2><p class="kicker">{s["install_k"]}</p><div class="install"><div class="card"><h3>{s["mac"]}</h3><ol>{mac}</ol></div><div class="card"><h3>{s["iphone"]}</h3><ol>{ios}</ol></div></div></div></section>'
       f'<section id="price"><div class="wrap"><h2 style="text-align:center">{s["price"]}</h2><p class="kicker" style="text-align:center">{s["price_k"]}</p><div class="price"><div class="big">9,99 € <small>{s["once"]}</small></div><p>{s["price_p"]}</p><p class="note" style="color:var(--muted);font-size:.9rem">{s["price_n"]}</p></div></div></section>'
