@@ -45,7 +45,7 @@ footer{padding:36px 0;color:var(--muted);font-size:.9rem;border-top:1px solid va
 /* docs pages */
 main.doc{max-width:720px;margin:0 auto;padding:48px 24px}
 @media (max-width:860px){.hero{padding-top:40px}.hero .wrap{grid-template-columns:1fr;gap:16px}.phones{height:540px;order:-1;margin-bottom:8px}.phone{width:180px}.phone.front{right:6%;top:0}.phone.back{right:48%;top:36px}.steps,.cards,.install{grid-template-columns:1fr}.feature{grid-template-columns:1fr;gap:24px}.feature:nth-child(even) .shot{order:0}nav .links{display:none}}
-.langs{display:flex;gap:10px;font-size:.85rem;margin-left:12px}.langs a{color:var(--muted)}.langs a.on{color:var(--text);font-weight:600}.langs a:hover{text-decoration:none;color:var(--text)}
+.langs{display:flex;gap:6px;margin-left:12px}.langs a{width:38px;height:30px;display:grid;place-items:center;border:1px solid var(--line);border-radius:8px;font-size:.78rem;font-weight:600;letter-spacing:.04em;color:var(--muted)}.langs a.on{color:#fff;background:var(--accent);border-color:var(--accent)}.langs a:hover{text-decoration:none;color:var(--text);border-color:#3a3a48}
 @media (max-width:860px){.langs{margin-left:auto}}
 .swipe{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:8px}.swipe figure{margin:0;text-align:center}
 .swipe .phone{position:static;width:240px;margin:0 auto 18px;transform:none}.swipe h3{margin:0 0 6px;font-size:1.2rem}.swipe p{color:var(--muted);margin:0 auto;max-width:28rem}

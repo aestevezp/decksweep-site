@@ -180,7 +180,7 @@ def head(t, lang, page):
 
 def nav(t, lang, page, doc=False):
     p = prefix(lang)
-    switch = "".join(f'<a class="{"on" if l == lang else ""}" href="{href(l, page)}">{NAMES[l]}</a>' for l in LANGS)
+    switch = "".join(f'<a class="{"on" if l == lang else ""}" href="{href(l, page)}" lang="{l}" hreflang="{l}" title="{NAMES[l]}" aria-label="{NAMES[l]}">{l.upper()}</a>' for l in LANGS)
     links = "" if doc else (f'<div class="links"><a href="#how">{t["nav_how"]}</a><a href="#features">{t["nav_feat"]}</a>'
                             f'<a href="#install">{t["nav_install"]}</a><a href="#price">{t["nav_price"]}</a><a href="#faq">{t["nav_faq"]}</a></div>')
     dl = "" if doc else f'<a class="btn small" href="{p}DeckSweep-1.0.dmg">{t["nav_dl"]}</a>'
