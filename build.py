@@ -3,6 +3,7 @@
 import os, html
 ROOT = os.path.dirname(os.path.abspath(__file__))
 LANGS = ["en", "es", "ca"]
+CSS_VERSION = 7          # bump whenever style.css changes; every generated page picks it up
 S = {
 "en": dict(lang="en",
   swipe_h="Swipe, like a deck of cards", swipe_k="One card, one decision, one thumb. Tinder for the junk on your Mac — except nothing is ever lost.",
@@ -176,7 +177,7 @@ def head(t, lang, page):
     alts += f'<link rel="alternate" hreflang="x-default" href="https://decksweep.securlabs.net{href("en", page)}">'
     return (f'<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
             f'<title>{t["title"]}</title><meta name="description" content="{html.escape(t["desc"])}">{alts}'
-            f'<link rel="icon" href="{prefix(lang)}img/icon.png"><link rel="stylesheet" href="{prefix(lang)}style.css?v=4"></head><body>')
+            f'<link rel="icon" href="{prefix(lang)}img/icon.png"><link rel="stylesheet" href="{prefix(lang)}style.css?v={CSS_VERSION}"></head><body>')
 
 def nav(t, lang, page, doc=False):
     p = prefix(lang)
