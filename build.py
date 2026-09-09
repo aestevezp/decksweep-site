@@ -3,7 +3,7 @@
 import os, html
 ROOT = os.path.dirname(os.path.abspath(__file__))
 LANGS = ["en", "es", "ca"]
-CSS_VERSION = 8          # bump whenever style.css changes; every generated page picks it up
+CSS_VERSION = 9          # bump whenever style.css changes; every generated page picks it up
 S = {
 "en": dict(lang="en",
   swipe_h="Swipe, like a deck of cards", swipe_k="One card, one decision, one thumb. Tinder for the junk on your Mac — except nothing is ever lost.",
