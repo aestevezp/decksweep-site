@@ -44,4 +44,4 @@ details{border-top:1px solid var(--line);padding:14px 0}details:last-child{borde
 footer{padding:36px 0;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}footer .wrap{display:flex;gap:18px;flex-wrap:wrap}
 /* docs pages */
 main.doc{max-width:720px;margin:0 auto;padding:48px 24px}
-@media (max-width:860px){.hero{padding-top:40px}.hero .wrap{grid-template-columns:1fr;gap:16px}.phones{height:470px;order:-1}.phone{width:190px}.phone.front{right:8%;top:0}.phone.back{right:46%;top:30px}.steps,.cards,.install{grid-template-columns:1fr}.feature{grid-template-columns:1fr;gap:24px}.feature:nth-child(even) .shot{order:0}nav .links{display:none}}
+@media (max-width:860px){.hero{padding-top:40px}.hero .wrap{grid-template-columns:1fr;gap:16px}.phones{height:540px;order:-1;margin-bottom:8px}.phone{width:180px}.phone.front{right:6%;top:0}.phone.back{right:48%;top:36px}.steps,.cards,.install{grid-template-columns:1fr}.feature{grid-template-columns:1fr;gap:24px}.feature:nth-child(even) .shot{order:0}nav .links{display:none}}
